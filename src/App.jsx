@@ -10,10 +10,10 @@ import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Register from './pages/Register';
-import Login from './pages/Login';          // Importado
 import UserDashboard from './pages/UserDashboard'; // Importado
 import Cart from './pages/Cart';            // Asumiendo que has creado Cart.jsx
 import NotFound from './pages/NotFound';
+import Login from './pages/login';
 
 
 function App() {
