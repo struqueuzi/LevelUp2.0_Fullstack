@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "categoria": "Noticias",
+    "titulo": "Nueva línea de productos 'Level Up'",
+    "descripcion": "Anunciamos el lanzamiento de nuestra nueva colección gamer personalizada.",
+    "fecha": "2025-10-10",
+    "imagen": "https://via.placeholder.com/400x200?text=Nueva+Linea+Level+Up"
+  },
+  {
+    "id": 2,
+    "categoria": "Eventos",
+    "titulo": "Participación en ExpoGamer Santiago",
+    "descripcion": "Visítanos en el evento gamer más grande de Chile, del 20 al 22 de octubre.",
+    "fecha": "2025-10-20",
+    "imagen": "https://via.placeholder.com/400x200?text=ExpoGamer+Santiago"
+  },
+  {
+    "id": 3,
+    "categoria": "Noticias",
+    "titulo": "Actualización del sitio web",
+    "descripcion": "Nuestra página ahora es más rápida y amigable para móviles.",
+    "fecha": "2025-09-25",
+    "imagen": "https://via.placeholder.com/400x200?text=Actualizacion+Sitio"
+  }
+]

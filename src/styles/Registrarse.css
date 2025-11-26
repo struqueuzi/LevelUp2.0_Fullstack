@@ -1,0 +1,124 @@
+/* === Importación de Tipografías === */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;600;700&display=swap');
+
+/* === Estilo general de la página === */
+body {
+    background-color: #000000; /* Negro gamer */
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 80px; /* Para que no se oculte con el footer */
+    margin: 0;
+}
+
+/* === Encabezados Gamer === */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #1E90FF; /* Azul eléctrico */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(30,144,255, 0.8);
+}
+
+/* === Contenedor General === */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* === Secciones Estilo Gamer === */
+section {
+    background-color: #111111;
+    border: 2px solid #1E90FF;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-top: 35px;
+    box-shadow: 0px 0px 18px rgba(30,144,255, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* === Párrafos / Texto secundario === */
+p {
+    color: #D3D3D3;
+    line-height: 1.6;
+}
+
+/* === Cards de noticias === */
+.card {
+    background-color: #111111;
+    border: 2px solid #39FF14; /* Verde neón */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 18px rgba(57,255,20, 0.5);
+}
+
+/* Imagen superior con estilo */
+.card-img-top {
+    width: 100%;
+    border-bottom: 3px solid #1E90FF;
+}
+
+/* Títulos dentro de cards */
+.card-title {
+    color: #39FF14;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    text-shadow: 0px 0px 6px rgba(57,255,20, 0.8);
+}
+
+/* Botón dentro de cards */
+.card .btn-primary {
+    background-color: #39FF14;
+    border: none;
+    color: #000000;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.card .btn-primary:hover {
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    box-shadow: 0 0 10px #1E90FF;
+}
+
+/* === Indicador de carga === */
+.text-center.mt-5 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #39FF14;
+    text-shadow: 0 0 6px rgba(57,255,20, 0.6);
+}
+
+/* === Footer Gamer fijo === */
+footer {
+    background-color: #111111;
+    color: #D3D3D3;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #1E90FF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* === Ajuste responsivo === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    section {
+        padding: 15px;
+    }
+}

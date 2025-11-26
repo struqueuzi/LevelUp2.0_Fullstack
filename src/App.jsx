@@ -1,33 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import './App.css'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Admin from './pages/Admin'
+
+import Catalogo from "./pages/Catalogo"
+import Noticias from "./pages/Noticias"
+import DetalleProducto from "./pages/DetalleProducto"
+import Footer from "./components/Footer"
+
+import Login from "./pages/Login"
+import Perfil from "./pages/Perfil"
+import Registrarse from "./pages/Registrarse"
+import Carrito from "./pages/carrito"
+import MetodoPago from "./pages/MetodoPAgo"
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Navbar/>
+      <div className='container mt-4'>
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/admin' element={<Admin/>}></Route>
+          <Route path='/catalogo' element={<Catalogo />}></Route>
+          <Route path='/noticias' element={<Noticias />}></Route>
+          <Route path="/producto/:codigo" element={<DetalleProducto />} />
+          <Route path="/registrarse" element={<Registrarse />} />
+          <Route path="/login" element={<Login />} /> 
+          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/carrito" element={<Carrito />} />
+          <Route path="/pago" element={<MetodoPago />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Footer/>
     </>
   )
 }

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "titulo": "Expo Gamer Santiago",
+    "descripcion": "Únete a nosotros en el evento gamer más grande de Chile. Con stands, concursos y regalos.",
+    "fecha": "2025-11-05",
+    "ubicacion": "Estación Mapocho, Santiago",
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.4378681495043!2d-70.6645803!3d-33.4355745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c585ecba94a7%3A0x5f90efbc2c3f5646!2sEstaci%C3%B3n%20Mapocho!5e0!3m2!1ses!2scl!4v1690909090909"
+  },
+  {
+    "id": 2,
+    "titulo": "Feria RetroGames Valparaíso",
+    "descripcion": "Una experiencia nostálgica con consolas clásicas, arcades y coleccionismo retro.",
+    "fecha": "2025-12-10",
+    "ubicacion": "Plaza Sotomayor, Valparaíso",
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.9445561134415!2d-71.6282882!3d-33.0402686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e12d456b0a0d%3A0x4b98f7a1b94e259!2sPlaza%20Sotomayor!5e0!3m2!1ses!2scl!4v1690909090999"
+  }
+]
