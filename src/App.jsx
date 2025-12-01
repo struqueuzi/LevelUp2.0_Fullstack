@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+// Importaciones de React Router DOM
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Importaciones de Bootstrap (deben ir al inicio)
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Importaciones de tus componentes de Estructura y Páginas
+import Layout from './components/Layout/Layout';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Register from './pages/Register';
+import UserDashboard from './pages/UserDashboard'; // Importado
+import Cart from './pages/Cart';            // Asumiendo que has creado Cart.jsx
+import NotFound from './pages/NotFound';
+import Login from './pages/login';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // Componente principal para manejar la navegación
+    <BrowserRouter>
+      <Routes>
+        
+        {/* RUTA PRINCIPAL: Todas las rutas aquí dentro usarán el Header y Footer del Layout */}
+        <Route path="/" element={<Layout />}>
+          
+          {/* 1. Ruta principal (Home.jsx) */}
+          <Route index element={<Home />} /> 
+          
+          {/* 2. Ruta de Productos */}
+          <Route path="products" element={<Products />} />
+          
+          {/* 3. Ruta de Registro (con validación de edad) */}
+          <Route path="register" element={<Register />} />
+          
+          {/* 4. AÑADIDO: Ruta de Login */}
+          <Route path="login" element={<Login />} />
+          
+          {/* 5. AÑADIDO: Ruta de Carrito */}
+          <Route path="cart" element={<Cart />} /> 
+          
+          {/* 6. AÑADIDO: Ruta del Dashboard (área privada) */}
+          <Route path="dashboard" element={<UserDashboard />} /> 
+
+        </Route>
+        
+        {/* RUTA DE FALLBACK: Para manejar URLs que no coinciden (404) */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
